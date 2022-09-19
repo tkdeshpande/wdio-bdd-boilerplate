@@ -10,7 +10,12 @@
       "expect-webdriverio"
     ],
     "target": "es2019",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
-  "exclude": ["node_modules", "temp"]
+  "exclude": [
+    "node_modules",
+    "temp"
+  ]
 }
