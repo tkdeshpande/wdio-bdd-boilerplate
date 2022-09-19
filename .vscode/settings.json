@@ -1,0 +1,7 @@
+{
+  "prettier.configPath": "",
+  "prettier.jsxSingleQuote": true,
+  "prettier.requireConfig": false,
+  "prettier.useEditorConfig": false,
+  "prettier.singleQuote": true
+}

@@ -1,3 +1,7 @@
+# Ignore dependencies:
 node_modules
-temp
+
+# Ignore artifacts:
 build
+
+temp
