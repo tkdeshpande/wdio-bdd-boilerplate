@@ -4,20 +4,20 @@ import { LoginPage } from '../../views/login.page';
 import { SecurePage } from '../../views/secure.page';
 
 const pages = {
-  login: new LoginPage(),
+	login: LoginPage,
 };
 
 Given(/I am on the (\w+) page/, async (page) => {
-  await pages[page].open();
+	await new pages[page]().open();
 });
 
 When(/I login with (\w+) and (.+)/, async (username, password) => {
-  const loginPage = new LoginPage();
-  await loginPage.login(username, password);
+	const loginPage = new LoginPage();
+	await loginPage.login(username, password);
 });
 
 Then(/I should see a flash message saying (.*)/, async (message) => {
-  const securePage = new SecurePage();
-  await expect(securePage.flashAlert).toBeExisting();
-  await expect(securePage.flashAlert).toHaveTextContaining(message);
+	const securePage = new SecurePage(message);
+	await expect(securePage.flashAlert).toBeExisting();
+	await expect(securePage.flashAlert).toHaveTextContaining(message);
 });
