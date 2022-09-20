@@ -4,4 +4,10 @@ node_modules
 # Ignore artifacts:
 build
 
+# Ignore code editor settings
+.vscode
+
+# Ignore environment configs
+.env*
+
 temp
