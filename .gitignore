@@ -3,6 +3,8 @@ node_modules
 
 # Ignore artifacts:
 build
+allure*
+reports
 
 # Ignore code editor settings
 .vscode
